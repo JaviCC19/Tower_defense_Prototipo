@@ -11,6 +11,7 @@ public class Troop_Base extends Actor
 {
     int counter = 0;
     
+    // Aqui se hace el movimiento 
     public void Movement(){
         int speed = 10; 
         int x = getX();
@@ -32,6 +33,7 @@ public class Troop_Base extends Actor
         setLocation(x, y);
     }
 
+    //  Attaque aqui
     public long Attack(long lastProjectileTime, long PROJECTILE_DELAY, int speed){
         long currentTime = System.currentTimeMillis();
             if (currentTime - lastProjectileTime+20>= 16) {
